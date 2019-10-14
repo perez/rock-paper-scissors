@@ -9,6 +9,10 @@
 <body>
 
     <script>
+        let round = 1;
+        let playerScore = 0;
+        let computerScore = 0;
+
         function computerPlay() {
             const randomNum = Math.floor(Math.random() * 3);
 
@@ -58,9 +62,8 @@
             }
         }
 
-        const playerSelection = 'ROCK'
-        const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
+        // const playerSelection = prompt('Please select rock, paper, or scissors to play!', '');
+        // const computerSelection = computerPlay();
     </script>
     
 </body>
