@@ -71,6 +71,31 @@
                 return 'Please choose rock, paper, or scissors.';
             }
         }
+
+        function game() {
+            const playerSelection = prompt('Please select rock, paper, or scissors to play!', '');
+            const computerSelection = computerPlay();
+
+            console.log(playRound(playerSelection, computerSelection));
+            if (round === 6) {
+                if (playerScore > computerScore) {
+                    resetGame();
+                    return 'You win! Game over.'
+                } else if (playerScore < computerScore) {
+                    resetGame();
+                    return 'You lose! Game over.'
+                } else {
+                    resetGame();
+                    return 'It\'s a draw! Game over.';
+                }
+            }
+        }
+
+        function resetGame () {
+            round = 1;
+            playerScore = 0;
+            computerScore = 0;
+        }
         
     </script>
     
