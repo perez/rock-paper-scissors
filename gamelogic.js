@@ -19,41 +19,26 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === 'rock') {
         if (computerSelection === 'rock') {
-            round++;
             return 'It\'s a tie! No winner this round.';
         } else if (computerSelection === 'paper') {
-            computerScore++;
-            round++;
             return 'You\'ve lost! Paper beats rock.';
         } else {
-            playerScore++;
-            round++;
             return 'You\'ve lost! Rock beats scissors.';
         }
     } else if (playerSelection === 'paper') {
         if (computerSelection === 'rock') {
-            playerScore++;
-            round++;
             return 'You\'ve won! Paper beats rock.';
         } else if (computerSelection === 'paper') {
-            round++;
             return 'It\'s a tie! No winner this round.';
         } else {
-            computerScore++;
-            round++;
             return 'You\'ve lost! Scissors beats paper.';
         }
     } else if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
-            computerScore++;
-            round++;
             return 'You\'ve lost! Rock beats scissors.';
         } else if (computerSelection === 'paper') {
-            playerScore++;
-            round++;
             return 'You\'ve won! Scissors beats paper.'
         } else {
-            round++;
             return 'It\'s a tie! No winner this round.';
         }
     } else {
@@ -78,10 +63,4 @@ function game() {
             return 'It\'s a draw! Game over.';
         }
     }
-}
-
-function resetGame () {
-    round = 1;
-    playerScore = 0;
-    computerScore = 0;
 }
