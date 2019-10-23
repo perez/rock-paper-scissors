@@ -26,6 +26,12 @@ section.scoreboard {
     display: inline-block;
     padding: 10px 25px;
 }
+span.player-counter {
+    color: blue;
+}
+span.computer-counter {
+    color: red;
+}
 section.select-text {
     font-size: 60px;
     font-style: italic;
