@@ -1,6 +1,18 @@
+//****** VARIABLES ******//
+
+const roundCounter = document.querySelector('.round-counter')
+const playerScoreCounter = document.querySelector('.player-counter');
+const computerScoreCounter = document.querySelector('.computer-counter');
+const selectText = document.querySelector('.select-text');
+const rockBtn = document.querySelector('#rock.btn');
+const paperBtn = document.querySelector('#paper.btn');
+const scissorsBtn = document.querySelector('#scissors.btn');
+
 let round = 1;
 let playerScore = 0;
 let computerScore = 0;
+
+//****** GAMEPLAY FUNCTIONS ******//
 
 function computerPlay() {
     const randomNum = Math.floor(Math.random() * 3);
@@ -61,3 +73,8 @@ function game() {
         }
     }
 }
+
+//****** SCORE FUNCTIONS ******//
+
+
+//****** EVENT LISTENERS ******//
