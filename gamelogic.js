@@ -18,43 +18,39 @@ function computerPlay() {
     const randomNum = Math.floor(Math.random() * 3);
 
     if (randomNum === 0) {
-        return 'rock';
+        return 'ROCK';
     } else if (randomNum === 1) {
-        return 'paper';
+        return 'PAPER';
     } else {
-        return 'scissors';
+        return 'SCISSORS';
     }
 }
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
-
+function playRound() {
     if (playerSelection === 'rock') {
-        if (computerSelection === 'rock') {
-            return 'It\'s a tie! No winner this round.';
-        } else if (computerSelection === 'paper') {
-            return 'You\'ve lost! Paper beats rock.';
+        if (computerPlay() === 'ROCK') {
+            selectText.textContent = 'It\'s a tie! No winner this round.';
+        } else if (computerPlay() === 'PAPER') {
+            selectText.textContent = 'You\'ve lost! Paper beats rock.';
         } else {
-            return 'You\'ve lost! Rock beats scissors.';
+            selectText.textContent = 'You\'ve lost! Rock beats scissors.';
         }
     } else if (playerSelection === 'paper') {
-        if (computerSelection === 'rock') {
-            return 'You\'ve won! Paper beats rock.';
-        } else if (computerSelection === 'paper') {
-            return 'It\'s a tie! No winner this round.';
+        if (computerPlay() === 'ROCK') {
+            selectText.textContent = 'You\'ve won! Paper beats rock.';
+        } else if (computerPlay() === 'PAPER') {
+            selectText.textContent = 'It\'s a tie! No winner this round.';
         } else {
-            return 'You\'ve lost! Scissors beats paper.';
+            selectText.textContent = 'You\'ve lost! Scissors beats paper.';
         }
     } else if (playerSelection === 'scissors') {
-        if (computerSelection === 'rock') {
-            return 'You\'ve lost! Rock beats scissors.';
-        } else if (computerSelection === 'paper') {
-            return 'You\'ve won! Scissors beats paper.'
+        if (computerPlay() === 'ROCK') {
+            selectText.textContent = 'You\'ve lost! Rock beats scissors.';
+        } else if (computerPlay() === 'PAPER') {
+            selectText.textContent = 'You\'ve won! Scissors beats paper.';
         } else {
-            return 'It\'s a tie! No winner this round.';
+            selectText.textContent = 'It\'s a tie! No winner this round.';
         }
-    } else {
-        return 'Please choose rock, paper, or scissors.';
     }
 }
 
