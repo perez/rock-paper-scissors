@@ -8,3 +8,29 @@ body {
     background-color: whitesmoke;
     font-family: 'cc_red_alert', Helvetica;
 }
+header {
+    font-size: 90px;
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+}
+main {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+}
+section.scoreboard {
+    margin-top: 15px;
+}
+.scoreboard h2 {
+    display: inline-block;
+    padding: 10px 25px;
+}
+section.select-text {
+    font-size: 60px;
+    font-style: italic;
+    padding-top: 20px;
+}
+section.select-buttons {
+    margin-top: 45px;
+}
