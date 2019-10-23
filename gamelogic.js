@@ -53,13 +53,10 @@ function game() {
     console.log(playRound(playerSelection, computerSelection));
     if (round === 6) {
         if (playerScore > computerScore) {
-            resetGame();
             return 'You win! Game over.'
         } else if (playerScore < computerScore) {
-            resetGame();
             return 'You lose! Game over.'
         } else {
-            resetGame();
             return 'It\'s a draw! Game over.';
         }
     }
