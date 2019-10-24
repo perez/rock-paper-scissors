@@ -23,32 +23,41 @@ function playRound(playerSelection, computerPlay) {
     if (playerSelection === 'rock') {
         if (computerPlay === 'ROCK') {
             selectText.textContent = 'It\'s a tie! No winner this round.';
+            addRound();
         } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'You\'ve lost! Paper beats rock.';
+            addRound();
             addComputerScore();
         } else {
             selectText.textContent = 'You\'ve won! Rock beats scissors.';
+            addRound();
             addPlayerScore();
         }
     } else if (playerSelection === 'paper') {
         if (computerPlay === 'ROCK') {
             selectText.textContent = 'You\'ve won! Paper beats rock.';
+            addRound();
             addPlayerScore();
         } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'It\'s a tie! No winner this round.';
+            addRound();
         } else {
             selectText.textContent = 'You\'ve lost! Scissors beats paper.';
+            addRound();
             addComputerScore();
         }
     } else if (playerSelection === 'scissors') {
         if (computerPlay === 'ROCK') {
             selectText.textContent = 'You\'ve lost! Rock beats scissors.';
+            addRound();
             addComputerScore();
         } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'You\'ve won! Scissors beats paper.';
+            addRound();
             addPlayerScore();
         } else {
             selectText.textContent = 'It\'s a tie! No winner this round.';
+            addRound();
         }
     }
 }
@@ -70,6 +79,11 @@ function game() {
 }
 
 //****** SCORE FUNCTIONS ******//
+
+function addRound() {
+    round++;
+    roundCounter.textContent = round;
+}
 
 function addPlayerScore() {
     playerScore++;
