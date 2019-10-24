@@ -1,25 +1,24 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
 
 @font-face {
-    font-family: 'cc_red_alert';
+    font-family: cc_red_alert;
     src: url(images/cc_red_alert.ttf);
 }
 body {
-    background-color: whitesmoke;
-    font-family: 'cc_red_alert', Helvetica;
+    background-color: #f5f5f5;
+    font-family: cc_red_alert, Helvetica;
     text-align: center;
 }
 header {
     font-size: 90px;
     display: block;
     padding-top: 10px;
-    text-align: center;
 }
 span.player-counter {
-    color: blue;
+    color: rgb(0, 0, 185);
 }
 span.computer-counter {
-    color: red;
+    color: rgb(185, 0, 0);
 }
 h2 {
     font-size: 50px;
@@ -36,13 +35,13 @@ section.select-buttons, section.new-game-button {
     margin-top: 50px;
 }
 button {
+    font: 80px cc_red_alert;
     background-color: whitesmoke;
     border: 8px solid black;
     padding: 5px 10px;
-    font: 80px 'cc_red_alert';
     cursor: pointer;
 }
 button:hover {
-    color: green;
-    border-color: green;
+    color: rgb(0, 165, 0);
+    border-color: rgb(0, 165, 0);
 }
