@@ -7,6 +7,7 @@ const selectText = document.querySelector('.select-text');
 const rockBtn = document.querySelector('#rock.btn');
 const paperBtn = document.querySelector('#paper.btn');
 const scissorsBtn = document.querySelector('#scissors.btn');
+const newGameBtn = document.querySelector('#new-game.btn')
 
 let round = 1;
 let playerScore = 0;
