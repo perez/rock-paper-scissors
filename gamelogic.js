@@ -19,14 +19,14 @@ const computerPlay = () => {
     return rpsArray[Math.floor(Math.random() * 3)];
 }
 
-function playRound() {
+function playRound(playerSelection, computerPlay) {
     if (playerSelection === 'rock') {
         if (computerPlay === 'ROCK') {
             selectText.textContent = 'It\'s a tie! No winner this round.';
         } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'You\'ve lost! Paper beats rock.';
         } else {
-            selectText.textContent = 'You\'ve lost! Rock beats scissors.';
+            selectText.textContent = 'You\'ve won! Rock beats scissors.';
         }
     } else if (playerSelection === 'paper') {
         if (computerPlay === 'ROCK') {
@@ -67,3 +67,15 @@ function game() {
 
 
 //****** EVENT LISTENERS ******//
+
+rockBtn.addEventListener('click', () => {
+    playRound('rock', computerPlay());
+});
+
+paperBtn.addEventListener('click', () => {
+    playRound('paper', computerPlay());
+});
+
+scissorsBtn.addEventListener('click', () => {
+    playRound('scissors', computerPlay());
+});
