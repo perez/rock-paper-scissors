@@ -14,39 +14,32 @@ let computerScore = 0;
 
 //****** GAMEPLAY FUNCTIONS ******//
 
-function computerPlay() {
-    const randomNum = Math.floor(Math.random() * 3);
-
-    if (randomNum === 0) {
-        return 'ROCK';
-    } else if (randomNum === 1) {
-        return 'PAPER';
-    } else {
-        return 'SCISSORS';
-    }
+const computerPlay = () => {
+    const rpsArray = ['ROCK', 'PAPER', 'SCISSORS'];
+    return rpsArray[Math.floor(Math.random() * 3)];
 }
 
 function playRound() {
     if (playerSelection === 'rock') {
-        if (computerPlay() === 'ROCK') {
+        if (computerPlay === 'ROCK') {
             selectText.textContent = 'It\'s a tie! No winner this round.';
-        } else if (computerPlay() === 'PAPER') {
+        } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'You\'ve lost! Paper beats rock.';
         } else {
             selectText.textContent = 'You\'ve lost! Rock beats scissors.';
         }
     } else if (playerSelection === 'paper') {
-        if (computerPlay() === 'ROCK') {
+        if (computerPlay === 'ROCK') {
             selectText.textContent = 'You\'ve won! Paper beats rock.';
-        } else if (computerPlay() === 'PAPER') {
+        } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'It\'s a tie! No winner this round.';
         } else {
             selectText.textContent = 'You\'ve lost! Scissors beats paper.';
         }
     } else if (playerSelection === 'scissors') {
-        if (computerPlay() === 'ROCK') {
+        if (computerPlay === 'ROCK') {
             selectText.textContent = 'You\'ve lost! Rock beats scissors.';
-        } else if (computerPlay() === 'PAPER') {
+        } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'You\'ve won! Scissors beats paper.';
         } else {
             selectText.textContent = 'It\'s a tie! No winner this round.';
@@ -56,7 +49,7 @@ function playRound() {
 
 function game() {
     const playerSelection = prompt('Please select rock, paper, or scissors to play!', '');
-    const computerSelection = computerPlay();
+    const computerSelection = computerPlay;
 
     console.log(playRound(playerSelection, computerSelection));
     if (round === 6) {
