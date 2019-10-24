@@ -94,10 +94,10 @@ function addComputerScore() {
 const resetScore = () => {
     [round, roundCounter.textContent] = [1, 1];
     [playerScore, computerScore] = [0, 0];
-    [playerScore.textContent, computerScore.textContent] = [0, 0];
+    [playerScoreCounter.textContent, computerScoreCounter.textContent] = [0, 0];
     selectText.textContent = 'Select your hand!';
-    newGameBtn.style.display = 'none';
     [rockBtn.disabled, paperBtn.disabled, scissorsBtn.disabled] = [false, false, false];
+    newGameBtn.style.display = 'none';
 }
 
 //****** EVENT LISTENERS ******//
