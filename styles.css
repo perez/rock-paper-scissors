@@ -1,4 +1,4 @@
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
 
 @font-face {
     font-family: 'cc_red_alert';
@@ -7,6 +7,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 body {
     background-color: whitesmoke;
     font-family: 'cc_red_alert', Helvetica;
+    text-align: center;
 }
 header {
     font-size: 90px;
@@ -14,34 +15,24 @@ header {
     padding-top: 10px;
     text-align: center;
 }
-main {
-    font-size: 50px;
-    display: block;
-    text-align: center;
-}
-section.scoreboard {
-    margin-top: 15px;
-}
-.scoreboard h2 {
-    display: inline-block;
-    padding: 10px 25px;
-}
 span.player-counter {
     color: blue;
 }
 span.computer-counter {
     color: red;
 }
+h2 {
+    font-size: 50px;
+    display: inline-block;
+    padding: 15px 25px;
+}
 section.select-text {
-    font-size: 60px;
+    font-size: 50px;
     font-style: italic;
     margin-top: 20px;
 }
-section.select-buttons {
-    margin-top: 45px;
-}
-section.new-game-button {
-    margin-top: 45px;
+section.select-buttons, section.new-game-button {
+    margin-top: 50px;
 }
 button {
     background-color: whitesmoke;
