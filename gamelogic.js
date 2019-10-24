@@ -57,14 +57,14 @@ function playRound(playerSelection, computerPlay) {
     }
     addRound();
     if (round === 5) {
-        game();
+        declareWinner();
         newGameBtn.style.display = 'inline-block';
         newGameBtn.disabled = false;
         [rockBtn.disabled, paperBtn.disabled, scissorsBtn.disabled] = [true, true, true];
     }
 }
 
-function game() {
+function declareWinner() {
     if (playerScore > computerScore) {
         selectText.textContent = 'You win! Game over.';
     } else if (playerScore < computerScore) {
@@ -93,8 +93,8 @@ function addComputerScore() {
 
 const resetScore = () => {
     [round, roundCounter.textContent] = [1, 1];
-    [playerScore, playerScore.textContent] = [0, 0];
-    [computerScore, computerScore.textContent] = [0, 0];
+    [playerScore, computerScore] = [0, 0];
+    [playerScore.textContent, computerScore.textContent] = [0, 0];
     selectText.textContent = 'Select your hand!';
     newGameBtn.style.display = 'none';
     [rockBtn.disabled, paperBtn.disabled, scissorsBtn.disabled] = [false, false, false];
