@@ -60,21 +60,18 @@ function playRound(playerSelection, computerPlay) {
             addRound();
         }
     }
+    if (round === 5) {
+        game();
+    }
 }
 
 function game() {
-    const playerSelection = prompt('Please select rock, paper, or scissors to play!', '');
-    const computerSelection = computerPlay;
-
-    console.log(playRound(playerSelection, computerSelection));
-    if (round === 6) {
-        if (playerScore > computerScore) {
-            return 'You win! Game over.'
-        } else if (playerScore < computerScore) {
-            return 'You lose! Game over.'
-        } else {
-            return 'It\'s a draw! Game over.';
-        }
+    if (playerScore > computerScore) {
+        selectText.textContent = 'You win! Game over.';
+    } else if (playerScore < computerScore) {
+        selectText.textContent = 'You lose! Game over.';
+    } else {
+        selectText.textContent = 'It\'s a draw! Game over.';
     }
 }
 
