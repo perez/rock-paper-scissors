@@ -13,6 +13,9 @@ let round = 1;
 let playerScore = 0;
 let computerScore = 0;
 
+newGameBtn.style.display = 'none';
+newGameBtn.disabled = true;
+
 //****** GAMEPLAY FUNCTIONS ******//
 
 const computerPlay = () => {
@@ -24,45 +27,40 @@ function playRound(playerSelection, computerPlay) {
     if (playerSelection === 'rock') {
         if (computerPlay === 'ROCK') {
             selectText.textContent = 'It\'s a tie! No winner this round.';
-            addRound();
         } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'You\'ve lost! Paper beats rock.';
-            addRound();
             addComputerScore();
         } else {
             selectText.textContent = 'You\'ve won! Rock beats scissors.';
-            addRound();
             addPlayerScore();
         }
     } else if (playerSelection === 'paper') {
         if (computerPlay === 'ROCK') {
             selectText.textContent = 'You\'ve won! Paper beats rock.';
-            addRound();
             addPlayerScore();
         } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'It\'s a tie! No winner this round.';
-            addRound();
         } else {
             selectText.textContent = 'You\'ve lost! Scissors beats paper.';
-            addRound();
             addComputerScore();
         }
     } else if (playerSelection === 'scissors') {
         if (computerPlay === 'ROCK') {
             selectText.textContent = 'You\'ve lost! Rock beats scissors.';
-            addRound();
             addComputerScore();
         } else if (computerPlay === 'PAPER') {
             selectText.textContent = 'You\'ve won! Scissors beats paper.';
-            addRound();
             addPlayerScore();
         } else {
             selectText.textContent = 'It\'s a tie! No winner this round.';
-            addRound();
         }
     }
+    addRound();
     if (round === 5) {
         game();
+        newGameBtn.style.display = 'inline-block';
+        newGameBtn.disabled = false;
+        [rockBtn.disabled, paperBtn.disabled, scissorsBtn.disabled] = [true, true, true];
     }
 }
 
@@ -91,6 +89,15 @@ function addPlayerScore() {
 function addComputerScore() {
     computerScore++;
     computerScoreCounter.textContent = computerScore;
+}
+
+const resetScore = () => {
+    [round, roundCounter.textContent] = [1, 1];
+    [playerScore, playerScore.textContent] = [0, 0];
+    [computerScore, computerScore.textContent] = [0, 0];
+    selectText.textContent = 'Select your hand!';
+    newGameBtn.style.display = 'none';
+    [rockBtn.disabled, paperBtn.disabled, scissorsBtn.disabled] = [false, false, false];
 }
 
 //****** EVENT LISTENERS ******//
