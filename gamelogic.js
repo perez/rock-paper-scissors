@@ -113,3 +113,5 @@ paperBtn.addEventListener('click', () => {
 scissorsBtn.addEventListener('click', () => {
     playRound('scissors', computerPlay());
 });
+
+newGameBtn.addEventListener('click', resetScore);
