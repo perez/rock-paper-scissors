@@ -8,11 +8,16 @@ body {
     background-color: #f5f5f5;
     font-family: cc_red_alert, Helvetica;
     text-align: center;
+    display: block;
 }
 header {
     font-size: 90px;
-    display: block;
-    padding-top: 10px;
+    margin-top: 10px;
+}
+.scoreboard h2 {
+    font-size: 50px;
+    display: inline-block;
+    margin: 10px 0px;
 }
 span.player-counter {
     color: rgb(0, 0, 185);
@@ -20,19 +25,27 @@ span.player-counter {
 span.computer-counter {
     color: rgb(185, 0, 0);
 }
-h2 {
-    font-size: 50px;
-    display: inline-block;
-    padding: 15px 25px;
-}
 section.select-text {
     font-size: 50px;
     font-weight: bold;
     font-style: italic;
-    margin-top: 20px;
+    margin: 10px 0;
 }
 section.select-buttons, section.new-game-button {
     margin-top: 50px;
+}
+input.btn {
+  display: inline-block;
+  height: 272px;
+  padding: 0 20px;
+  transition-duration: 0.1s;
+  -webkit-transition: 0.1s;
+}
+input.btn:hover {
+  transform: translateY(-15px);
+}
+input.btn:disabled {
+  transform: translateY(0);
 }
 button {
     font: 80px cc_red_alert;
